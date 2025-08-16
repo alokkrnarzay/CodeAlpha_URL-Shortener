@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>URL Shortener</h1>
+      <p>Shorten your long URLs into compact, easy-to-share links</p>
+    </header>
+    
+    <main>
+      <div class="form-container">
+        <form id="url-form">
+          <div class="input-group">
+            <input 
+              type="url" 
+              id="url-input" 
+              placeholder="Enter your long URL here..." 
+              required
+            >
+            <button type="submit">Shorten URL</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="result-container" id="result-container" style="display: none;">
+        <div class="result-card">
+          <h2>Your Shortened URL</h2>
+          <div class="short-url-display">
+            <a href="#" id="short-url-link" target="_blank"></a>
+          </div>
+          <div class="action-buttons">
+            <button id="copy-btn" class="action-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+            <button id="new-url-btn" class="action-btn secondary">
+              <i class="fas fa-plus"></i> Shorten Another
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="error-container" id="error-container" style="display: none;">
+        <div class="error-message">
+          <i class="fas fa-exclamation-circle"></i>
+          <span id="error-message"></span>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 URL Shortener - A simple tool to shorten your URLs</p>
+    </footer>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
